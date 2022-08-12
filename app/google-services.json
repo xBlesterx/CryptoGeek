@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "631546016520",
+    "project_id": "coingeek3",
+    "storage_bucket": "coingeek3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631546016520:android:53bad17928d90b259ab2bd",
+        "android_client_info": {
+          "package_name": "com.example.CryptoGeek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631546016520-e5vt7m64t4osltsv101iqrgn4gl5v8fs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW1pfoiRXsnH2Shrqv2w4xqQp-Eb3-Zok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631546016520-e5vt7m64t4osltsv101iqrgn4gl5v8fs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

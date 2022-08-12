@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- default color of ANY text (menu items, labels, etc. ) unless color attribute is overridden -->
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <!-- color of the default background -->
+        <item name="android:windowBackground">@color/backgroundColor</item>
+
+    </style>
+
+
+</resources>
