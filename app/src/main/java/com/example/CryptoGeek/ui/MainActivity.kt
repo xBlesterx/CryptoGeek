@@ -3,8 +3,6 @@ package com.example.CryptoGeek.ui
 
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -39,7 +37,7 @@ class MainActivity() : AppCompatActivity(), ILoadMore,
     }
 
 
-    public fun loadFirst10Coin() {
+    private fun loadFirst10Coin() {
         client = OkHttpClient()
         request = Request.Builder()
             .url(String.format(CryptoAPI.API_URI_INITIAL))
