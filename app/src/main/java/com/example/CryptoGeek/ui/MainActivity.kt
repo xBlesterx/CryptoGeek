@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.fragment_coins.*
 import okhttp3.*
 import org.json.JSONObject
 import java.io.IOException
+import kotlin.jvm.JvmField as JvmField1
 
 class MainActivity() : AppCompatActivity(), ILoadMore,
     androidx.appcompat.widget.SearchView.OnQueryTextListener {
@@ -132,7 +133,6 @@ class MainActivity() : AppCompatActivity(), ILoadMore,
             adapter.updateData(searcher)
             coin_recycler_view.layoutManager = LinearLayoutManager(this)
             setUpAdapter(searcher)
-            println("yes")
         }
         if (searcher.isEmpty()) Toast.makeText(this, "Can't find this Crypto!! Try again", Toast.LENGTH_SHORT)
             .show()

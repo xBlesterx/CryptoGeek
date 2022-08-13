@@ -27,8 +27,11 @@ class CoinViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var sevenDayChange = itemView.sevenDay
 }
 
-class CoinAdapter(recyclerView: RecyclerView, private var activity: Activity, var items: List<Coin>) : RecyclerView.Adapter<CoinViewHolder>() {
-
+class CoinAdapter(
+    recyclerView: RecyclerView,
+    private var activity: Activity,
+    var items: List<Coin>,
+) : RecyclerView.Adapter<CoinViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinViewHolder {
@@ -57,19 +60,25 @@ class CoinAdapter(recyclerView: RecyclerView, private var activity: Activity, va
             .into(item.coinIcon)
 
         //Set color
-        item.oneHourChange.setTextColor(if (coinModel.quote.usd.percentChange1h.toString().contains("-"))
+        item.oneHourChange.setTextColor(if (coinModel.quote.usd.percentChange1h.toString()
+                .contains("-")
+        )
             Color.parseColor("#FF0000")
         else
             Color.parseColor("#32CD32")
         )
 
-        item.twentyFourChange.setTextColor(if (coinModel.quote.usd.percentChange24h.toString().contains("-"))
+        item.twentyFourChange.setTextColor(if (coinModel.quote.usd.percentChange24h.toString()
+                .contains("-")
+        )
             Color.parseColor("#FF0000")
         else
             Color.parseColor("#32CD32")
         )
 
-        item.sevenDayChange.setTextColor(if (coinModel.quote.usd.percentChange7d.toString().contains("-"))
+        item.sevenDayChange.setTextColor(if (coinModel.quote.usd.percentChange7d.toString()
+                .contains("-")
+        )
             Color.parseColor("#FF0000")
         else
             Color.parseColor("#32CD32")
@@ -79,7 +88,6 @@ class CoinAdapter(recyclerView: RecyclerView, private var activity: Activity, va
 
     internal var loadMore: ILoadMore? = null
     var isLoading: Boolean = false
-    var visibleThreshold = 5
     var lastVisibleItem: Int = 0
     var totalItemCount: Int = 0
 
@@ -103,12 +111,11 @@ class CoinAdapter(recyclerView: RecyclerView, private var activity: Activity, va
         return items.size
     }
 
-    fun  setLoaded(){
+    fun setLoaded() {
         isLoading = true
     }
 
-    fun updateData(coinModels: List<Coin>)
-    {
+    fun updateData(coinModels: List<Coin>) {
         this.items = coinModels
         notifyDataSetChanged()
     }
